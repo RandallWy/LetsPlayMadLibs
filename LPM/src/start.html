@@ -2,62 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet"
-          type="text/css" media="all">
-    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
-    <link href="SVG/lpmLogo.svg" rel="icon"/>
-    <title>Let's Play MadLibs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/start_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
+    <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
+    <title>Let's Play MadLibs: Start Your Story</title>
 </head>
 <body>
-<div class="container">
+<!--Todo Fix alignment of this header and story-->
+<header>
+    <div class="row">
+        <div class="col">
+            <img class="img-responsive" id="left" src="SVG/lpmLogo.svg"/>
+        </div>
+        <div class="col-6 align-self-center">
+            <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
+            <p class="create_user">Want To Create A User? <a href="create_user.html"> Click Here</a></p>
+        </div>
+        <div class="col float-right">
+            <img class="img-responsive" id="right" src="SVG/lpmLogo.svg"/>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
     <div id="questions">
+
         <h1>Please fill out the following!</h1>
-        <hr>
+
         <form role="form">
             <div class="form-group">
-                <label for="person">Boy's Name</label>
-                <input id="person" class="form-control person" type="text" placeholder="Enter a boy's name ..">
+                <label for="person">Boy's Name</label><br/>
+                <input id="person" class="form-control person" type="text">
             </div>
             <div class="form-group">
-                <label for="adjective">Adjective</label>
-                <input id="adjective" class="form-control adjective" type="text" placeholder="Enter an adjective ..">
+                <label for="adjective">Adjective</label><br/>
+                <input id="adjective" class="form-control adjective" type="text">
             </div>
+            <label for="noun">Plural noun</label><br/>
             <div class="form-group">
-                <label for="noun">Plural noun</label>
-                <input id="noun" class="form-control noun" type="text" placeholder="Enter a plural noun ..">
+                <input id="noun" class="form-control noun" type="text">
             </div>
+            <label for="insect">An insect, plural</label><br/>
             <div class="form-group">
-                <label for="insect">An insect, plural</label>
-                <input id="insect" class="form-control insect" type="text" placeholder="Enter an insect, plural ..">
+                <input id="insect" class="form-control insect" type="text">
             </div>
+            <label for="noun2">Plural noun</label><br/>
             <div class="form-group">
-                <label for="noun2">Plural noun</label>
-                <input id="noun2" class="form-control plural-noun" type="text" placeholder="Enter a plural noun ..">
+                <input id="noun2" class="form-control plural-noun" type="text">
             </div>
+            <label for="verb">A verb ending in "s"</label><br/>
             <div class="form-group">
-                <label for="verb">A verb ending in "s"</label>
-                <input id="verb" class="form-control verb" type="text" placeholder="Enter a verb ending in " s" ..">
+                <input id="verb" class="form-control verb" type="text">
             </div>
             <div>
             </div>
+
+            <button id="btn-click" type="submit"
+                    class="btn btn-primary btn-lg">Generate!
+            </button>
         </form>
-        <button id="btn-click" type="submit" class="btn btn-primary btn-lg">Generate!</button>
-        <hr>
+
     </div>
     <!-- end form -->
     <!-- start story -->
     <div id="story">
         <h1>Mad with the Libs</h1>
         <hr>
-        <h3>I'm in love with <span class="person"></span>. He's so <span class="adjective"></span>! He has big flat
+        <h3>There once was a man named <span class="person"></span>. He's lived so <span class="adjective"></span>! He
+            has big flat
             <span class="noun"></span>, and when our <span class="insect"></span> meet, I get <span
-                    class="noun2"></span> in my stomach. I've fallen for him like a ton of <span class="verb"></span>,
-            and he shuffles for me, too. But I think he's got another girlfriend. What should I do?</h3>
+                    class="noun2"></span>on my sandwich. He is the most active <span class="verb"></span>, but I think
+            he is imaginary since no one knows who I am talking about.</h3>
+        <div>
+            <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+        </div>
     </div>
+
     <!-- end story -->
 </div>
+<footer class="page-footer font-small teal pt-4">
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">                <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <p>FAQs</p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mb-md-0 text-right mb-3">
+
+                <!-- Content -->
+                <p>About MadLibs</p>
+
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none pb-3">
+        </div>
+        <!-- Grid row -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
+            <hr class="clearfix w-100 d-md-none pb-3">
+        </div>
+
+        <!-- Copyright -->
+    </div>
+    <!-- Footer Text -->
+
+
+</footer>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/story.js"></script>
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

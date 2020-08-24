@@ -1,0 +1,106 @@
+<!--Todo Fix alignment of this sign in and header-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/create_user_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
+    <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
+    <title>Let's Play MadLibs: Create user</title>
+
+</head>
+<header>
+    <div class="row">
+        <div class="col">
+            <img class="img-responsive" id="left" src="SVG/lpmLogo.svg"/>
+        </div>
+        <div class="col-6 align-self-center">
+            <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
+            <p id="crUsr" class="create_user">Want To Create A User? <a href="sign_in.html"> Click Here</a></p>
+        </div>
+        <div class="col float-right">
+            <img class="img-responsive" id="right" src="SVG/lpmLogo.svg"/>
+        </div>
+    </div>
+</header>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                   required autofocus>
+                        </div>
+                        <br/>
+                        <div class="form-label-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                   required>
+                        </div>
+                        <br/>
+                        <div class="form-label-group">
+                            <label for="inputPassword">Re-Enter Password</label>
+                            <input type="password" id="verifyPassword" class="form-control" placeholder="Re-Enter Password"
+                                   required>
+                        </div>
+                        <br/>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        </div>
+                        <button id="sign_in" onclick="logInAndRedirect()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">SIGN IN</button>
+                        <hr class="my-4">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer font-small teal pt-4">
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">                <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <p>FAQs</p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mb-md-0 text-right mb-3">
+
+                <!-- Content -->
+                <p>About MadLibs</p>
+
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none pb-3">
+        </div>
+        <!-- Grid row -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
+            <hr class="clearfix w-100 d-md-none pb-3">
+        </div>
+
+        <!-- Copyright -->
+    </div>
+    <!-- Footer Text -->
+
+
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

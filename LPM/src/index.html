@@ -12,92 +12,80 @@
     <title>Let's Play MadLibs</title>
 
 </head>
+
+
 <body>
 
+
 <header>
-    <header class="page-header">
-        <div class="col-md-1" id="left">
-            <img class="img-responsive" src="SVG/lpmLogo.svg"/>
+    <div class="row">
+        <div class="col">
+            <img class="img-responsive" id="left" src="SVG/lpmLogo.svg"/>
         </div>
-        <div class="col-lg-10">
-            <h1>Let's Play MadLibs</h1>
-        </div>
-        <div class="col-md-1">
-            <img class="img-responsive" src="SVG/lpmLogo.svg"/>
-        </div>
-    </header>
-</header>
+        <div class="col-6 align-self-center">
+            <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
 
-<div class="container-fluid">
-    <div class="container-lg">
-        <div class="content">
-
-            <h1>
-                <strong>Mad Libs</strong> is a phrasal template word game where one player prompts others for a list of
-                words to substitute for blanks in a story before reading aloud. The game is frequently played as a party
-                game or as a pastime.
-            </h1>
-            <br/>
-            <button onclick="document.location='start.html'" id="btn-click" type="submit"
-                    class="btn btn-primary btn-lg">Start!
-            </button>
+            <p  id="user" class="create_user">Want To Create A User? <a href="sign_in.html"> Click Here</a></p>
+        </div>
+        <div class="col float-right">
+            <img class="img-responsive" id="right" src="SVG/lpmLogo.svg"/>
         </div>
     </div>
-</div>
-<footer>
-    <footer class="page-footer font-small teal pt-4">
+</header>
 
-        <!-- Footer Text -->
-        <div class="container-fluid text-center text-md-left">
+<main class="container-fluid">
+    <article>
+        <strong>Mad Libs</strong> is a phrasal template word game where one player prompts others for a list of
+        words to substitute for blanks in a story before reading aloud. The game is frequently played as a party
+        game or as a pastime.
+    </article>
+    <br/>
+    <button onclick="document.location='start.html'" id="btn-click" type="submit"
+            class="btn btn-primary btn-lg">Start!
+    </button>
 
-            <!-- Grid row -->
-            <div class="row">
+</main>
 
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+<footer class="page-footer font-small teal pt-4">
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">                <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <p>FAQs</p>
+            </div>
+            <!-- Grid column -->
 
-                    <!-- Content -->
-                    <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
-                        repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam
-                        recusandae
-                        harum esse fugiat. Itaque, culpa?</p>
+            <hr class="clearfix w-100 d-md-none pb-3">
 
-                </div>
-                <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-6 mb-md-0 text-right mb-3">
 
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mb-md-0 mb-3">
-
-                    <!-- Content -->
-                    <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi
-                        earum
-                        commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam,
-                        aspernatur id
-                        excepturi hic.</p>
-
-                </div>
-                <!-- Grid column -->
+                <!-- Content -->
+                <p>About MadLibs</p>
 
             </div>
-            <!-- Grid row -->
-
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none pb-3">
         </div>
-        <!-- Footer Text -->
+        <!-- Grid row -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
+            <hr class="clearfix w-100 d-md-none pb-3">
+        </div>
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
+    </div>
+    <!-- Footer Text -->
 
-    </footer>
-    <!-- Footer -->
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+</footer>
+
+
+<!-- Footer -->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 /*Header Styling*/
 header {
     width: 100%;
-    position: absolute;
     border: 3px solid black;
     background: white;
     color: black;
@@ -22,26 +21,43 @@ header h1, .create_user {
     text-align: center;
     overflow: hidden;
 }
-header h1 a{
-    text-decoration: none
-}
-
 
 div img #right{
     display: inline;
-    width: 5%;
+    width: 10%;
     right: 0;
     float: right;
 }
 
+header h1 a{
+    text-decoration: none
+}
 /*End Header */
 
+body {
+    width: 100%;
+    /*border: 5px solid black;*/
+    position: center;
+    background: #e65c5c;
+    font-family: Roboto, sans-serif;
+    color: black;
+    min-height:100vh;
+    overflow: hidden;
+}
 
-/*.flex-fill {*/
-/*    flex:1 1 auto;*/
-/*}*/
+.content{
+    width: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    background: white;
+    color: black;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+}
 
-button, .btn .btn-primary .btn-lg {
+button, .btn .btn-primary .btn-lg{
     background: #ffff9a;
     border-width: 5px;
     border-style: solid;
@@ -50,7 +66,7 @@ button, .btn .btn-primary .btn-lg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -65,27 +81,31 @@ button, .btn .btn-primary .btn-lg {
     color: black;
 }
 
-body {
+.img-responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    /*border: 5px solid black;*/
-    position: center;
-    background: #e65c5c;
-    font-family: Roboto, sans-serif;
-    color: black;
-    min-height: 100vh;
-    overflow: hidden;
+    height: auto;
+    align-items: center;
 }
 
-main {
-    width: 50%;
-    text-align: center;
+label{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
+    text-align: center;
 }
 
+#person, #adjective, #noun, #insect, #noun2, #verb{
+    width: 50%;
+    border: 0.3125em solid black;
+    text-align: center;
+    background: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+}
 footer {
     width: 100%;
     padding-left: 0;
