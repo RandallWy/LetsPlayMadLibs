@@ -10,23 +10,9 @@ header {
 
 }
 
-div img #left {
-    position: absolute;
-    display: inline;
-    width: 5%;
-    left: 0;
-}
-
 header h1, .create_user {
     text-align: center;
     overflow: hidden;
-}
-
-div img #right{
-    display: inline;
-    width: 10%;
-    right: 0;
-    float: right;
 }
 
 header h1 a{
@@ -42,6 +28,28 @@ body {
     font-family: Roboto, sans-serif;
     color: black;
     min-height:100vh;
+    overflow: hidden;
+}
+div #questions h1{
+    text-align: center;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+
+}
+form{
+    font-size: 25pt;
+    text-align: center;
+}
+
+.form-group input{
+    width: 50%;
+    border: 5px solid black;
+    text-align: center;
+    background: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto, sans-serif;
     overflow: hidden;
 }
 
@@ -85,27 +93,22 @@ button, .btn .btn-primary .btn-lg{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 20%;
     height: auto;
     align-items: center;
 }
 
-label{
-    position: absolute;
-    text-align: center;
-}
-
-#person, #adjective, #noun, #insect, #noun2, #verb{
-    width: 50%;
-    border: 0.3125em solid black;
-    text-align: center;
-    background: white;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Roboto, sans-serif;
-    overflow: hidden;
-}
+/*#person, #adjective, #noun, #insect, #noun2, #verb{*/
+/*    width: 50%;*/
+/*    border: 0.3125em solid black;*/
+/*    text-align: center;*/
+/*    background: white;*/
+/*    color: black;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    font-family: Roboto, sans-serif;*/
+/*    overflow: hidden;*/
+/*}*/
 footer {
     width: 100%;
     padding-left: 0;
