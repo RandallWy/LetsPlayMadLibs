@@ -7,3 +7,8 @@ footer {
 }
 
 
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector {} }
+@media screen and (min--moz-device-pixel-ratio:0) {}
+@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) {} }
+@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) {} }
+

@@ -13,9 +13,9 @@
 
 <body class="w-100 overflow-hidden">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
     <div class="container">
-        <a class="pl-1 navbar-brand navbar-collapse" href="#"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
+        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
         <a class="mr-2 navbar-brand" href="#">Let's Play MadLibs</a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,9 +35,9 @@
     </div>
 </nav>
 
-<div class="d-block">
-    <main class="d-block text-center justify-content-center">
-        <p class="pt-5 mt-5 w-75 text-break ml-auto mr-auto">
+<div class="d-block overflow-hidden ">
+    <main class="align-middle mx-auto text-center justify-content-center">
+        <p class="pt-5 mt-5 w-50 text-break ml-auto mr-auto">
             <strong>Mad Libs</strong> is a phrasal template word game where one player prompts
             others for a list of
             words to substitute for blanks in a story before reading aloud. The game is frequently played as a party
@@ -57,16 +57,25 @@
                     <li class="float-left list-inline-item text-left">
                         <a href="#" class="text-dark text-decoration-none">About MadLibs</a>
                     </li>
-                    <li class="list-inline-item">&sdot;</li>
+                    <li class="list-inline-item"></li>
                     <li class="float-right mr-3 list-inline-item">
                         <a href="#" class="text-dark text-decoration-none">FAQs</a>
                     </li>
                 </ul>
-                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation.</p>
+                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation</p>
             </div>
         </div>
     </div>
 </footer>
+<script>
+    $(document).ready(function () {
+        $("#createUser").onload(function (event) {
+            event.preventDefault();
+            let user = localStorage.getItem("user")
+            document.getElementById('navbarResponsive').firstChild.replaceWith(`<p>Welcome ${user}!</p>`)
+        });
+    });
+</script>
 
 <!-- Footer -->
 <script src="js/jquery.slim.min.js"></script>

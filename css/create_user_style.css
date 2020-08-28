@@ -1,97 +1,130 @@
-/*Header Styling*/
-header {
-    width: 100%;
-    position: absolute;
-    border: 3px solid black;
-    background: white;
-    color: black;
-    font-family: Roboto, sans-serif;
-    overflow: hidden;
-    height: auto;
-
-}
-
-div img #left {
-    position: absolute;
-    display: inline;
-    width: 5%;
-    left: 0;
-}
-
-header h1, .create_user {
-    text-align: center;
-    overflow: hidden;
-}
-
-header h1 a{
-    text-decoration: none;
-}
-
-div img #right{
-    display: inline;
-    width: 5%;
-    right: 0;
-    float: right;
-}
-
-/*End Header */
-
-
-/*.flex-fill {*/
-/*    flex:1 1 auto;*/
-/*}*/
-
-button, .btn .btn-primary .btn-lg {
-    background: #ffff9a;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.btn-primary:hover {
-    background: #ffff9a;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-}
-
 body {
-    width: 100%;
-    /*border: 5px solid black;*/
-    position: center;
     background: #e65c5c;
-    font-family: Roboto, sans-serif;
-    color: black;
-    min-height: 100vh;
-    overflow: hidden;
 }
 
-
-
-footer {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    border-left: 1px solid black;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    text-align: center;
-    color: black;
+.login-form-1 {
+    border-radius: 5px;
+    display: inline-block;
+}
+.main-login-form {
+    position: relative;
+}
+.login-form-1 .form-control {
+    border: 0;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    background: transparent;
+    color: #555555;
+    padding: 7px 0;
+    font-weight: bold;
+    height:auto;
+}
+.login-form-1 .form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+    color: #999999;
+}
+.login-form-1 .form-group {
+    margin-bottom: 0;
+    border-bottom: 2px solid #efefef;
+    padding-right: 20px;
+    position: relative;
+}
+.login-form-1 .form-group:last-child {
+    border-bottom: 0;
+}
+.login-group {
+    background: #ffffff;
+    color: #999999;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+.login-group-checkbox {
+    padding: 5px 0;
+}
+/*=== 5. Login Button ===*/
+.login-button {
     position: absolute;
-    bottom: 0;
-    font-family: Roboto, sans-serif;
-    background: #96f892;
-    overflow: hidden;
+    right: -25px;
+    top: 50%;
+    background: #ffffff;
+    color: #999999;
+    padding: 11px 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border: 5px solid #efefef;
+    border-radius: 50%;
+    transition: all ease-in-out 500ms;
 }
-
-
+.login-form-1 .login-button:hover {
+    color: #555555;
+    transform: rotate(450deg);
+}
+.login-form-1 .login-button.clicked {
+    color: #555555;
+}
+.login-form-1 .login-button.clicked:hover {
+    transform: none;
+}
+.login-form-1 .login-button.clicked.success {
+    color: #2ecc71;
+}
+.login-form-1 .login-button.clicked.error {
+    color: #e74c3c;
+}
+/*=== 6. Form Invalid ===*/
+label.form-invalid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    display: block;
+    margin-top: -25px;
+    padding: 7px 9px;
+    background: #777777;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+label.form-invalid:after {
+    top: 100%;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-top-color: #777777;
+    border-width: 6px;
+}
+/*=== 7. Form - Main Message ===*/
+.login-form-main-message {
+    background: #ffffff;
+    color: #999999;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    height: 0;
+    padding: 0 20px 0 17px;
+    opacity: 0;
+    transition: all ease-in-out 200ms;
+}
+.login-form-main-message.show {
+    height: auto;
+    opacity: 1;
+    padding: 10px 20px 10px 17px;
+}
+.login-form-main-message.success {
+    border-left-color: #2ecc71;
+}
+.login-form-main-message.error {
+    border-left-color: #e74c3c;
+}

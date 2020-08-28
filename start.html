@@ -13,20 +13,28 @@
 </head>
 <body>
 <!--Todo Fix alignment of this header and story-->
-<header>
-    <div class="row">
-        <div class="col">
-            <img class="img-responsive" id="left" src="SVG/lpmLogo.svg"/>
-        </div>
-        <div class="col-6 align-self-center">
-            <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
-            <p class="create_user">Want To Create A User? <a href="create_user.html"> Click Here</a></p>
-        </div>
-        <div class="col float-right">
-            <img class="img-responsive" id="right" src="SVG/lpmLogo.svg"/>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
+    <div class="container">
+        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
+        <a class="mr-2 navbar-brand" href="#">Let's Play MadLibs</a>
+        <p></p>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto d-block">
+                <li class="nav-item pb-1">
+                    <button onclick="document.location='sign_in.html'" id="userCreate" type="button"
+                            class="btn btn-dark btn-sm">Sign In</button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="document.location='create_user.html'" type="button"
+                            class="btn btn-dark btn-sm">Create User</button>
+                </li>
+            </ul>
         </div>
     </div>
-</header>
+</nav>
 
 <div class="container-fluid">
     <div id="questions">
@@ -84,38 +92,24 @@
 
     <!-- end story -->
 </div>
-<footer class="page-footer font-small teal pt-4">
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">                <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-                <!-- Content -->
-                <p>FAQs</p>
+<footer class="footer w-100 fixed-bottom overflow-hidden">
+    <div class="container">
+        <div class="row text-center">
+            <div class="w-100 h-100 text-center my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="float-left list-inline-item text-left">
+                        <a href="#" class="text-dark text-decoration-none">About MadLibs</a>
+                    </li>
+                    <li class="list-inline-item"></li>
+                    <li class="float-right mr-3 list-inline-item">
+                        <a href="#" class="text-dark text-decoration-none">FAQs</a>
+                    </li>
+                </ul>
+                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation.</p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-6 mb-md-0 text-right mb-3">
-
-                <!-- Content -->
-                <p>About MadLibs</p>
-
-            </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
         </div>
-        <!-- Grid row -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
-            <hr class="clearfix w-100 d-md-none pb-3">
-        </div>
-
-        <!-- Copyright -->
     </div>
-    <!-- Footer Text -->
+</footer>
 
 
 </footer>

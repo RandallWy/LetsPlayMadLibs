@@ -1,122 +1,184 @@
-<!--Todo Fix alignment of this sign in and header-->
 <!DOCTYPE html>
 <html lang="en">
+
+
+<!------ Include the above in your HEAD tag ---------->
+
 <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Create user</title>
 
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img class="ml-2 w-auto" id="left" src="SVG/lpmLogo.svg"/>
-    <a class="text-center navbar-brand" href="#">Let's Play MadLibs</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="align-content-end">
-            <div class="col">
-                <label for="userSignIn" class="pr-md-5 font-weight-bold">Already A
-                    User?</label>
-                <button onclick="document.location='sign_in.html'" type="button" id="userSignIn"
-                        class="btn mt-1 mb-1 btn-dark btn-sm">Log In Here
-                </button>
-            </div>
-        </div>
-        <div class="col">
-            <label for="userCreate" class="font-weight-bold">Want To Create A
-                User?</label>
-            <button onclick="document.location='create_user.html'" id="userCreate" type="button"
-                    class="btn btn-dark btn-sm">Click Here
-            </button>
+<body class="w-100 overflow-hidden">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
+    <div class="container">
+        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg"
+                                                                            alt="lpmLogo"/></a>
+        <a class="h1 navbar-brand" href="#">Let's Play MadLibs</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto d-block">
+                <li class="nav-item pb-1">
+                    <button onclick="document.location='sign_in.html'" id="userCreate" type="button"
+                            class="btn btn-dark btn-sm">Sign In
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="document.location='create_user.html'" type="button"
+                            class="btn btn-dark btn-sm">Create User
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <label for="inputEmail">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                   required autofocus>
-                        </div>
-                        <br/>
-                        <div class="form-label-group">
-                            <label for="inputPassword">Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-                                   required>
-                        </div>
-                        <br/>
-                        <div class="form-label-group">
-                            <label for="inputPassword">Re-Enter Password</label>
-                            <input type="password" id="verifyPassword" class="form-control"
-                                   placeholder="Re-Enter Password"
-                                   required>
-                        </div>
-                        <br/>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                        </div>
-                        <button id="sign_in" onclick="logInAndRedirect()"
-                                class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">SIGN IN
-                        </button>
-                        <hr class="my-4">
-                    </form>
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- All the files that are required -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+
+<!-- Where all the magic happens -->
+
+
+<!-- REGISTRATION FORM -->
+<div class="text-center mt-5 border border-dark px-1 py-1 bg-light w-50 ml-auto mr-auto">
+    <div class="logo">Create User</div>
+    <!-- Main Form -->
+    <div class="login-form-1">
+        <form id="register-form" class="text-left">
+            <div class="login-form-main-message"></div>
+            <div class="main-login-form">
+                <div class="login-group">
+                    <div class="form-group">
+                        <label for="reg_username" class="sr-only">Email address</label>
+                        <input type="text" class="form-control" id="reg_username" name="reg_username"
+                               placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="reg_password" name="reg_password"
+                               placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+                        <input type="password" class="form-control" id="reg_password_confirm"
+                               name="reg_password_confirm" placeholder="confirm password">
+                    </div>
+
+                    <!--                    <div class="form-group">-->
+                    <!--                        <label for="reg_email" class="sr-only">Email</label>-->
+                    <!--                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">-->
+                    <!--                    </div>-->
+
+                    <div class="form-group login-group-checkbox">
+                        <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+                        <label for="reg_agree">i agree with <a data-toggle="modal" href="#tosModal">terms</a></label>
+                    </div>
                 </div>
+                <button type="submit" onsubmit="getUser()" id="createUser" class="login-button"><i
+                        class="fa fa-chevron-right"></i></button>
+            </div>
+            <div class="etc-login-form">
+                <p>already have an account? <a href="sign_in.html">login here</a></p>
+            </div>
+        </form>
+    </div>
+    <!-- end:Main Form -->
+</div>
+
+</div>
+<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Our Terms Of Service</h5>
+            </div>
+            <div class="modal-body">
+                <p>By signing up, you agree to the terms of service as follows:</p>
+                <ul class="w-100 flex-nowrap">
+                    <li>You agree to give me a passing grade.&#129315;</li>
+                    <li>Agree that bootstrap is anti-creative and that I am being completely sarcastic.</li>
+                    <li>Backend coding is so much more fun.</li>
+                </ul>
+                <p>By clicking close and/or Sign Up, you agree to these terms of service.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
             </div>
         </div>
     </div>
 </div>
-<footer class="page-footer font-small teal pt-4">
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">                <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-                <!-- Content -->
-                <p>FAQs</p>
+
+
+<footer class="footer w-100 fixed-bottom overflow-hidden">
+    <div class="container">
+        <div class="row text-center">
+            <div class="w-100 h-100 text-center my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="float-left list-inline-item text-left">
+                        <a href="#" class="text-dark text-decoration-none">About MadLibs</a>
+                    </li>
+                    <li class="list-inline-item"></li>
+                    <li class="float-right mr-3 list-inline-item">
+                        <a href="#" class="text-dark text-decoration-none">FAQs</a>
+                    </li>
+                </ul>
+                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation</p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-6 mb-md-0 text-right mb-3">
-
-                <!-- Content -->
-                <p>About MadLibs</p>
-
-            </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
         </div>
-        <!-- Grid row -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
-            <hr class="clearfix w-100 d-md-none pb-3">
-        </div>
-
-        <!-- Copyright -->
     </div>
-    <!-- Footer Text -->
-
-
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
+            $("#tosModal").modal();
+        });
+    });
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#createUser").click(function (event) {
+            event.preventDefault();
+            let user = localStorage.setItem("user", document.getElementById('reg_username').textContent)
+            window.location = "index.html";
+            document.getElementById('navbarResponsive').firstChild.replaceWith(`<p>Welcome ${user}!</p>`)
+        });
+    });
+</script>
+<script src="js/userHandling.js"></script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/main.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 </body>
 </html>

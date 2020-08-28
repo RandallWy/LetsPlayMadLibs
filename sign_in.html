@@ -13,84 +13,78 @@
     <title>Let's Play MadLibs: Log In</title>
 
 </head>
-<header>
-    <header class="page-header">
-        <div class="col-lg-1">
-            <div class="col-md-auto" id="left">
-                <img class="img-responsive" src="SVG/lpmLogo.svg"/>
-            </div>
-            <div class="col-md-auto">
-                <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
-            </div>
-            <div class="create_user">
-                <p>Want To Create A User? <a href="sign_in.html"> Click Here</a></p>
-            </div>
-            <div class="col-md-a" id="right">
-                <img class="img-responsive" src="SVG/lpmLogo.svg"/>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
+    <div class="container">
+        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
+        <a class="mr-2 navbar-brand" href="#">Let's Play MadLibs</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto d-block">
+                <li class="nav-item pb-1">
+                    <button onclick="document.location='sign_in.html'" id="userCreate" type="button"
+                            class="flex-nowrap btn btn-dark btn-sm">Sign In</button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="document.location='create_user.html'" type="button"
+                            class="btn btn-dark btn-sm">Create User</button>
+                </li>
+            </ul>
         </div>
-    </header>
-</header>
+    </div>
+</nav>>
 
-<!--Todo Fix alignment of this sign in-->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <label for="inputEmail">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                   required autofocus>
-                        </div>
-                        <br/>
-                        <div class="form-label-group">
-                            <label for="inputPassword">Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-                                   required>
-                        </div>
-                        <br/>
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                        <hr class="my-4">
-                    </form>
+<!-- LOGIN FORM -->
+<div class="text-center" style="padding:50px 0">
+    <div class="logo">login</div>
+    <!-- Main Form -->
+    <div class="login-form-1">
+        <form id="login-form" class="text-left">
+            <div class="login-form-main-message"></div>
+            <div class="main-login-form">
+                <div class="login-group">
+                    <div class="form-group">
+                        <label for="lg_username" class="sr-only">Username</label>
+                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="lg_password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                    </div>
+                    <div class="form-group login-group-checkbox">
+                        <input type="checkbox" id="lg_remember" name="lg_remember">
+                        <label for="lg_remember">remember</label>
+                    </div>
                 </div>
+                <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
             </div>
-        </div>
+            <div class="etc-login-form">
+                <p>forgot your password? <a href="#">click here</a></p>
+                <p>new user? <a href="#">create new account</a></p>
+            </div>
+        </form>
     </div>
+    <!-- end:Main Form -->
 </div>
-<footer class="page-footer font-small teal pt-4">
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">                <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-                <!-- Content -->
-                <p>FAQs</p>
+
+<footer class="footer w-100 fixed-bottom overflow-hidden">
+    <div class="container">
+        <div class="row text-center">
+            <div class="w-100 h-100 text-center my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="float-left list-inline-item text-left">
+                        <a href="#" class="text-dark text-decoration-none">About MadLibs</a>
+                    </li>
+                    <li class="list-inline-item"></li>
+                    <li class="float-right mr-3 list-inline-item">
+                        <a href="#" class="text-dark text-decoration-none">FAQs</a>
+                    </li>
+                </ul>
+                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation</p>
             </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
-            <!-- Grid column -->
-            <div class="col-md-6 mb-md-0 text-right mb-3">
-                <!-- Content -->
-                <p>About MadLibs</p>
-            </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
         </div>
-        <!-- Grid row -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright: A Randall Wyatt Creation
-            <hr class="clearfix w-100 d-md-none pb-3">
-        </div>
-        <!-- Copyright -->
     </div>
-    <!-- Footer Text -->
 </footer>
 <script src="js/bootstrap.js"></script>
 </body>
