@@ -7,27 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/create_user_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Create user</title>
 
 </head>
-<header>
-    <div class="row">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="ml-2 w-auto" id="left" src="SVG/lpmLogo.svg"/>
+    <a class="text-center navbar-brand" href="#">Let's Play MadLibs</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="align-content-end">
+            <div class="col">
+                <label for="userSignIn" class="pr-md-5 font-weight-bold">Already A
+                    User?</label>
+                <button onclick="document.location='sign_in.html'" type="button" id="userSignIn"
+                        class="btn mt-1 mb-1 btn-dark btn-sm">Log In Here
+                </button>
+            </div>
+        </div>
         <div class="col">
-            <img class="img-responsive" id="left" src="SVG/lpmLogo.svg"/>
-        </div>
-        <div class="col-6 align-self-center">
-            <h1><a href="index.html" style="text-decoration:none; color: black">Let's Play MadLibs</a></h1>
-            <p id="crUsr" class="create_user">Want To Create A User? <a href="sign_in.html"> Click Here</a></p>
-        </div>
-        <div class="col float-right">
-            <img class="img-responsive" id="right" src="SVG/lpmLogo.svg"/>
+            <label for="userCreate" class="font-weight-bold">Want To Create A
+                User?</label>
+            <button onclick="document.location='create_user.html'" id="userCreate" type="button"
+                    class="btn btn-dark btn-sm">Click Here
+            </button>
         </div>
     </div>
-</header>
-<body>
+</nav>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -49,7 +62,8 @@
                         <br/>
                         <div class="form-label-group">
                             <label for="inputPassword">Re-Enter Password</label>
-                            <input type="password" id="verifyPassword" class="form-control" placeholder="Re-Enter Password"
+                            <input type="password" id="verifyPassword" class="form-control"
+                                   placeholder="Re-Enter Password"
                                    required>
                         </div>
                         <br/>
@@ -57,7 +71,9 @@
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Remember password</label>
                         </div>
-                        <button id="sign_in" onclick="logInAndRedirect()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">SIGN IN</button>
+                        <button id="sign_in" onclick="logInAndRedirect()"
+                                class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">SIGN IN
+                        </button>
                         <hr class="my-4">
                     </form>
                 </div>

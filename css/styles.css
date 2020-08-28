@@ -1,69 +1,9 @@
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 300px) {
-    header{
-        width: 100%;
-    }
-}
-
-@media (min-width: 576px) {
-
-}
-
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
-
-
-main p {
-    width: 25%;
-    align-items: center;
-    /*font-family: Roboto, sans-serif;*/
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-}
-strong{
-    font-weight: 900;
-}
-.btn .btn-primary{
-    margin-left: auto;
-    margin-right: auto;
-}
-
 body {
-    width: 100%;
-    position: center;
     background: #e65c5c;
-    /*font-family: Roboto, sans-serif;*/
-    color: black;
-    min-height: 100vh;
-    overflow: hidden;
 }
-#sticky-footer {
-    flex-shrink: revert;
-}
+
 footer {
-    padding-left: 0;
-    padding-right: 0;
-    /*border: 5px solid black;*/
-    text-align: center;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    /*font-family: Roboto, sans-serif;*/
     background: #96f892;
-    overflow: hidden;
 }
 
 
