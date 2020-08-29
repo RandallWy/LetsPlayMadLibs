@@ -67,15 +67,7 @@
         </div>
     </div>
 </footer>
-<script>
-    $(document).ready(function () {
-        $("#createUser").onload(function (event) {
-            event.preventDefault();
-            let user = localStorage.getItem("user")
-            document.getElementById('navbarResponsive').firstChild.replaceWith(`<p>Welcome ${user}!</p>`)
-        });
-    });
-</script>
+
 
 <!-- Footer -->
 <script src="js/jquery.slim.min.js"></script>

@@ -3,95 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/start_style.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Start Your Story</title>
 </head>
-<body>
-<!--Todo Fix alignment of this header and story-->
+<body class="w-100 overflow-hidden">
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
     <div class="container">
-        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
+        <a class="pl-1 navbar-brand " href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg"
+                                                                            alt="lpmLogo"/></a>
         <a class="mr-2 navbar-brand" href="#">Let's Play MadLibs</a>
-        <p></p>
-        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto d-block">
+        <div class="collapse navbar-collapse" data-toggle="collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav">
                 <li class="nav-item pb-1">
                     <button onclick="document.location='sign_in.html'" id="userCreate" type="button"
-                            class="btn btn-dark btn-sm">Sign In</button>
+                            class="flex-nowrap btn btn-dark btn-sm">Sign In
+                    </button>
                 </li>
                 <li class="nav-item">
                     <button onclick="document.location='create_user.html'" type="button"
-                            class="btn btn-dark btn-sm">Create User</button>
+                            class="btn btn-dark btn-sm">Create User
+                    </button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container mt-2 w-75 border border-dark bg-light overflow-hidden">
+
+    <!-- start form -->
     <div id="questions">
-
         <h1>Please fill out the following!</h1>
-
-        <form role="form">
-            <div class="form-group">
-                <label for="person">Boy's Name</label><br/>
-                <input id="person" class="form-control person" type="text">
+        <form>
+            <div class="form-group ">
+                <label for="person">Boy's Name</label>
+                <input id="person" class="form-control person" type="text" placeholder="Enter a boy's name">
             </div>
             <div class="form-group">
-                <label for="adjective">Adjective</label><br/>
-                <input id="adjective" class="form-control adjective" type="text">
+                <label for="adjective">Adjective</label>
+                <input id="adjective" class="form-control adjective" type="text" placeholder="Enter an adjective">
             </div>
-            <label for="noun">Plural noun</label><br/>
             <div class="form-group">
-                <input id="noun" class="form-control noun" type="text">
+                <label for="noun">Plural noun</label>
+                <input id="noun" class="form-control noun" type="text" placeholder="Enter a plural noun">
             </div>
-            <label for="insect">An insect, plural</label><br/>
             <div class="form-group">
-                <input id="insect" class="form-control insect" type="text">
+                <label for="insect">An insect, plural</label>
+                <input id="insect" class="form-control insect" type="text" placeholder="Enter an insect, plural">
             </div>
-            <label for="noun2">Plural noun</label><br/>
             <div class="form-group">
-                <input id="noun2" class="form-control plural-noun" type="text">
+                <label for="noun2">Plural noun</label>
+                <input id="noun2" class="form-control plural-noun" type="text" placeholder="Enter a plural noun">
             </div>
-            <label for="verb">A verb ending in "s"</label><br/>
             <div class="form-group">
-                <input id="verb" class="form-control verb" type="text">
+                <label for="verb">A verb ending in "s"</label>
+                <input id="verb" class="form-control verb" type="text" placeholder="Enter a verb ending in 's'">
             </div>
             <div>
             </div>
-
-            <button id="btn-click" type="submit"
-                    class="btn btn-primary btn-lg">Generate!
-            </button>
         </form>
-
-    </div>
-    <!-- end form -->
-    <!-- start story -->
-    <div id="story">
-        <h1>Mad with the Libs</h1>
-        <hr>
-        <h3>There once was a man named <span class="person"></span>. He's lived so <span class="adjective"></span>! He
-            has big flat
-            <span class="noun"></span>, and when our <span class="insect"></span> meet, I get <span
-                    class="noun2"></span>on my sandwich. He is the most active <span class="verb"></span>, but I think
-            he is imaginary since no one knows who I am talking about.</h3>
-        <div>
-            <button type="submit" class="btn btn-primary btn-lg" id="play-btn">Play Again?</button>
+        <div class="text-center py-2">
+            <button id="btn-click" type="submit" class=" btn btn-primary btn-sm">Generate!</button>
         </div>
     </div>
+    <!-- end form -->
 
+    <!-- start story -->
+    <div id="story" class="w-75 overflow-hidden">
+        <h1>Your MadLibs Story</h1>
+        <hr>
+        <p>There once was a man named <span class="person"></span>. He's lived so <span class="adjective"></span>! He
+            has big flat
+            <span class="noun"></span>, and when our <span class="insect"></span> meet, I get <span
+                    class="noun2"></span> on my sandwich. He is the most active <span class="verb"></span>, but I think
+            he is imaginary since no one knows who I am talking about.</p>
+        <div class="text-center mb-2">
+            <button type="submit" class="btn btn-primary btn-sm" id="play-btn">Play Again?</button>
+        </div>
+    </div>
     <!-- end story -->
+
+
 </div>
+
 <footer class="footer w-100 fixed-bottom overflow-hidden">
     <div class="container">
         <div class="row text-center">
@@ -105,19 +110,25 @@
                         <a href="#" class="text-dark text-decoration-none">FAQs</a>
                     </li>
                 </ul>
-                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation.</p>
+                <p class="flex-fill h6 text-dark text-center mb-4 mb-lg-0">a Randall Wyatt Creation</p>
             </div>
         </div>
     </div>
 </footer>
 
+<script>
+    $("#navbarResponsive").click(function(e) {
+        $("#questions").show();
+        $("#story").hide();
+    });
 
-</footer>
+</script>
+
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
 <script src="js/story.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

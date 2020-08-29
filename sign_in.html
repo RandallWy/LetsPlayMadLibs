@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/create_user_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Log In</title>
@@ -36,7 +36,7 @@
 </nav>>
 
 <!-- LOGIN FORM -->
-<div class="text-center" style="padding:50px 0">
+<div class="text-center w-50 mr-auto ml-auto">
     <div class="logo">login</div>
     <!-- Main Form -->
     <div class="login-form-1">
@@ -57,11 +57,10 @@
                         <label for="lg_remember">remember</label>
                     </div>
                 </div>
-                <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                <button type="submit" id="login" class="login-button"><i class="fa fa-chevron-right"></i></button>
             </div>
             <div class="etc-login-form">
-                <p>forgot your password? <a href="#">click here</a></p>
-                <p>new user? <a href="#">create new account</a></p>
+                <p>new user? <a href="create_user.html">create new account</a></p>
             </div>
         </form>
     </div>
@@ -86,6 +85,14 @@
         </div>
     </div>
 </footer>
+<script>
+    $("#login").click(function (event) {
+        event.preventDefault();
+        let user = document.getElementById('lg_username').innerText;
+        localStorage.setItem("user", `${user}`)
+        window.location = "index.html";
+    });
+</script>
 <script src="js/bootstrap.js"></script>
 </body>
 </html>

@@ -1,6 +1,19 @@
 body {
     background: #e65c5c;
 }
+header, body, footer, svg{
+    font-family: 'Asap', sans-serif;
+}
+.cls-1 {
+     fill-rule: evenodd;
+     color: white;
+ }
+
+.cls-2 {
+    color: white;
+    font-size: 34.8px;
+    font-family: Roboto-Regular, Roboto, sans-serif;
+}
 
 .login-form-1 {
     border-radius: 5px;
@@ -94,15 +107,13 @@ label.form-invalid {
 label.form-invalid:after {
     top: 100%;
     right: 10px;
-    border: solid transparent;
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-color: transparent;
+    border: 6px solid transparent;
     border-top-color: #777777;
-    border-width: 6px;
 }
 /*=== 7. Form - Main Message ===*/
 .login-form-main-message {
@@ -127,4 +138,7 @@ label.form-invalid:after {
 }
 .login-form-main-message.error {
     border-left-color: #e74c3c;
+}
+footer {
+    background: #96f892;
 }

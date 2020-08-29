@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!------ Include the above in your HEAD tag ---------->
-
 <head>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta charset="UTF-8">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/create_user_style.css">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Create user</title>
-
 </head>
 <body class="w-100 overflow-hidden">
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
@@ -25,8 +23,7 @@
         <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg"
                                                                             alt="lpmLogo"/></a>
         <a class="h1 navbar-brand" href="#">Let's Play MadLibs</a>
-        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -46,18 +43,6 @@
     </div>
 </nav>
 
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!-- All the files that are required -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-
-<!-- Where all the magic happens -->
-
 
 <!-- REGISTRATION FORM -->
 <div class="text-center mt-5 border border-dark px-1 py-1 bg-light w-50 ml-auto mr-auto">
@@ -68,12 +53,12 @@
             <div class="login-form-main-message"></div>
             <div class="main-login-form">
                 <div class="login-group">
-                    <div class="form-group">
+                    <div class="form-groupm pb-2">
                         <label for="reg_username" class="sr-only">Email address</label>
                         <input type="text" class="form-control" id="reg_username" name="reg_username"
                                placeholder="username">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group pb-2">
                         <label for="reg_password" class="sr-only">Password</label>
                         <input type="password" class="form-control" id="reg_password" name="reg_password"
                                placeholder="password">
@@ -84,20 +69,19 @@
                                name="reg_password_confirm" placeholder="confirm password">
                     </div>
 
-                    <!--                    <div class="form-group">-->
-                    <!--                        <label for="reg_email" class="sr-only">Email</label>-->
-                    <!--                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">-->
-                    <!--                    </div>-->
+                    <button type="submit" onsubmit="getUser()" onclick="userCreate()" id="createUser"
+                            class="login-button"><i
+                            class="fa fa-chevron-right"></i>
+                    </button>
 
-                    <div class="form-group login-group-checkbox">
+                    <div class="text-center form-group login-group-checkbox">
                         <input type="checkbox" class="" id="reg_agree" name="reg_agree">
-                        <label for="reg_agree">i agree with <a data-toggle="modal" href="#tosModal">terms</a></label>
+                        <label for="reg_agree">I agree with <a data-toggle="modal" href="#tosModal">terms</a></label>
                     </div>
                 </div>
-                <button type="submit" onsubmit="getUser()" id="createUser" class="login-button"><i
-                        class="fa fa-chevron-right"></i></button>
+
             </div>
-            <div class="etc-login-form">
+            <div class="text-center etc-login-form">
                 <p>already have an account? <a href="sign_in.html">login here</a></p>
             </div>
         </form>
@@ -105,8 +89,7 @@
     <!-- end:Main Form -->
 </div>
 
-</div>
-<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="tosModal" tabindex="-1" role="dialog">
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -158,19 +141,15 @@
 </script>
 
 <script>
-
-    $(document).ready(function () {
-        $("#createUser").click(function (event) {
-            event.preventDefault();
-            let user = localStorage.setItem("user", document.getElementById('reg_username').textContent)
-            window.location = "index.html";
-            document.getElementById('navbarResponsive').firstChild.replaceWith(`<p>Welcome ${user}!</p>`)
-        });
+    $("#createUser").click(function (event) {
+        event.preventDefault();
+        let user = document.getElementById('reg_username').innerText;
+        localStorage.setItem("user", `${user}`)
+        window.location = "index.html";
     });
+
 </script>
-<script src="js/userHandling.js"></script>
 <script src="js/jquery.min.js"></script>
-<!--<script src="js/main.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

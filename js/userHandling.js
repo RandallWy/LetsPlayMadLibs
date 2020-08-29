@@ -1,12 +1,3 @@
-function getUser(){
-    document.getElementById("createUser").onsubmit = function(){
-        let user = localStorage.setItem("user", document.getElementById('reg_username').textContent)
-        window.location.replace("index.html");
-        document.getElementById('navbarResponsive').firstChild.replaceWith(`<p>Welcome ${user}!</p>`)
-    }
-}
-
-
 
 
 (function($) {
