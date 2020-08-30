@@ -16,24 +16,20 @@
 <body class="w-100 overflow-hidden">
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
     <div class="container">
-        <a class="pl-1 navbar-brand " href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg"
-                                                                            alt="lpmLogo"/></a>
+        <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
         <a class="mr-2 navbar-brand" href="#">Let's Play MadLibs</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" data-toggle="collapse" id="navbarResponsive">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto d-block">
                 <li class="nav-item pb-1">
-                    <button onclick="document.location='sign_in.html'" id="userCreate" type="button"
-                            class="flex-nowrap btn btn-dark btn-sm">Sign In
-                    </button>
+                    <button onclick="document.location='signIin.html'" id="userCreate" type="button"
+                            class="flex-nowrap btn btn-dark btn-sm">Sign In</button>
                 </li>
                 <li class="nav-item">
                     <button onclick="document.location='create_user.html'" type="button"
-                            class="btn btn-dark btn-sm">Create User
-                    </button>
+                            class="btn btn-dark btn-sm">Create User</button>
                 </li>
             </ul>
         </div>

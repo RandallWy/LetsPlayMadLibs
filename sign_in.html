@@ -1,18 +1,24 @@
 <!--Todo Fix header-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta charset="UTF-8">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/create_user_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght400&display=swap" rel="stylesheet">
     <link href="SVG/lpmLogo.svg" rel="icon" type="image/x-icon"/>
     <title>Let's Play MadLibs: Log In</title>
 
 </head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow navbar-static-top">
     <div class="container">
         <a class="pl-1 navbar-brand navbar-collapse" href="index.html"><img class="ml-2" id="left" src="SVG/lpmLogo.svg" alt="lpmLogo"/></a>
@@ -36,31 +42,36 @@
 </nav>>
 
 <!-- LOGIN FORM -->
-<div class="text-center w-50 mr-auto ml-auto">
-    <div class="logo">login</div>
+<div class="text-center mt-5 border border-dark px-1 py-1 bg-light w-50 ml-auto mr-auto">
+    <div class="logo">Create User</div>
     <!-- Main Form -->
     <div class="login-form-1">
-        <form id="login-form" class="text-left">
+        <form id="register-form" class="text-left">
             <div class="login-form-main-message"></div>
             <div class="main-login-form">
                 <div class="login-group">
-                    <div class="form-group">
-                        <label for="lg_username" class="sr-only">Username</label>
-                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                    <div class="form-groupm pb-2">
+                        <label for="reg_username" class="sr-only">User Name</label>
+                        <input type="text" class="form-control" id="reg_username" name="reg_username"
+                               placeholder="username">
                     </div>
-                    <div class="form-group">
-                        <label for="lg_password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                    <div class="form-group pb-2">
+                        <label for="reg_password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="reg_password" name="reg_password"
+                               placeholder="password">
                     </div>
-                    <div class="form-group login-group-checkbox">
-                        <input type="checkbox" id="lg_remember" name="lg_remember">
-                        <label for="lg_remember">remember</label>
+
+                    <button type="submit" id="login-button" onclick="userLogin()" id="createUser"
+                            class="login-button"><i
+                            class="fa fa-chevron-right"></i>
+                    </button>
+
+                    <div class="text-center form-group login-group-checkbox">
+                        <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+                        <label for="reg_agree">I agree with <a data-toggle="modal" href="#tosModal">terms</a></label>
                     </div>
                 </div>
-                <button type="submit" id="login" class="login-button"><i class="fa fa-chevron-right"></i></button>
-            </div>
-            <div class="etc-login-form">
-                <p>new user? <a href="create_user.html">create new account</a></p>
+
             </div>
         </form>
     </div>
@@ -86,13 +97,22 @@
     </div>
 </footer>
 <script>
-    $("#login").click(function (event) {
-        event.preventDefault();
-        let user = document.getElementById('lg_username').innerText;
-        localStorage.setItem("user", `${user}`)
-        window.location = "index.html";
+    $(document).ready(function () {
+        $("#createUser").click(function (event) {
+            event.preventDefault();
+            window.location = "index.html";
+        });
     });
 </script>
-<script src="js/bootstrap.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 </body>
 </html>
