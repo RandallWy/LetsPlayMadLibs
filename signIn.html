@@ -63,13 +63,8 @@
                         <input type="password" class="form-control" id="reg_password" name="reg_password"
                                placeholder="password">
                     </div>
-                    <div class="form-group">
-                        <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                        <input type="password" class="form-control" id="reg_password_confirm"
-                               name="reg_password_confirm" placeholder="confirm password">
-                    </div>
 
-                    <button type="submit" onsubmit="getUser()" onclick="userCreate()" id="createUser"
+                    <button type="submit" onsubmit="userLogin()" id="login-button"
                             class="login-button"><i
                             class="fa fa-chevron-right"></i>
                     </button>
@@ -80,9 +75,6 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="text-center etc-login-form">
-                <p>already have an account? <a href="sign_in.html">login here</a></p>
             </div>
         </form>
     </div>
@@ -141,7 +133,7 @@
 </script>
 
 <script>
-    $("#createUser").click(function (event) {
+    $("#login-button").click(function (event) {
         event.preventDefault();
         let user = document.getElementById('reg_username').innerText;
         localStorage.setItem("user", `${user}`)
